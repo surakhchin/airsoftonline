@@ -4,10 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
+  <style>
+      .main {
+          background-image: url(gun225.png);
+          background-repeat: no-repeat;
+          background-position: -119px -690px;
+      }
+      .fire {
+          background-image: url(gun2.png);
+          background-repeat: no-repeat;
+          background-position: -119px -690px;
+      }
+  </style>
 </head>
-<body style="background-image: url(gun225.png); background-repeat: no-repeat; background-position: -119px -690px;">
+<body id="body" class="main">
 <!--background-size: 225%-->
 <!--background-position: -135px -635px;-->
-<button style="width: 150px; height: 145px; position: relative; left: 158px;top: -5px; background-color: Transparent"></button>
+<button style="width: 150px; height: 145px; position: relative; left: 158px;top: -5px; background-color: Transparent" onclick="fire()"></button>
+<script>
+    function fire(){
+
+        document.getElementById("body").classList.add('fire');
+
+
+        setTimeout(function (){
+
+          document.getElementById("body").classList.remove('fire');
+
+        }, 100); // How long do you want the delay to be (in milliseconds)?
+
+
+    }
+</script>
 </body>
 </html>
