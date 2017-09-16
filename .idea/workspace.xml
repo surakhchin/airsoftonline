@@ -23,7 +23,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="7" column="78" lean-forward="false" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="113" />
+              <caret line="7" column="78" lean-forward="true" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -307,7 +307,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="7" column="78" lean-forward="false" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="113" />
+          <caret line="7" column="78" lean-forward="true" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="113" />
           <folding />
         </state>
       </provider>
