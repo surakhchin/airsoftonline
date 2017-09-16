@@ -20,16 +20,19 @@
 <script>
     function fire(){
 
-        function gun_bang(){
-        var audio = document.createElement("audio");
-        audio.src = "./sound.mp3";
-        audio.addEventListener("ended", function () {
-            document.removeChild(this);
-        }, false);
+//        function gun_bang(){
+//        var audio = document.createElement("audio");
+//        audio.src = "./sound.mp3";
+//        audio.addEventListener("ended", function () {
+//            document.removeChild(this);
+//        }, false);
+//        audio.play();
+//    }
+//
+//    gun_bang();
+        var audio = document.getElementById("audio");
+        audio.currentTime=0;
         audio.play();
-    }
-
-    gun_bang();
 
         document.getElementById("body").classList.add('fire');
 
