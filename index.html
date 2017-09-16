@@ -50,70 +50,49 @@
 
     }
 
+    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    $.event.special.tap = {
-    setup: function(data, namespaces) {
-        var $elem = $(this);
-        $elem.bind('touchstart', $.event.special.tap.handler)
-             .bind('touchmove', $.event.special.tap.handler)
-             .bind('touchend', $.event.special.tap.handler);
-    },
-
-    teardown: function(namespaces) {
-        var $elem = $(this);
-        $elem.unbind('touchstart', $.event.special.tap.handler)
-             .unbind('touchmove', $.event.special.tap.handler)
-             .unbind('touchend', $.event.special.tap.handler);
-    },
-
-    handler: function(event) {
-        event.preventDefault();
-        var $elem = $(this);
-        $elem.data(event.type, 1);
-        if (event.type === 'touchend' && !$elem.data('touchmove')) {
-            event.type = 'tap';
-            $.event.handle.apply(this, arguments);
-        } else if ($elem.data('touchend')) {
-            $elem.removeData('touchstart touchmove touchend');
-        }
-    }
-};
-
-$('.button button').bind('tap', function() {
-    //bind tap event to an img tag with the class thumb
-    document.getElementById("body").classList.add('fire');
-
-
-        setTimeout(function (){
-
-          document.getElementById("body").classList.remove('fire');
-
-        }, 100); // How long do you want the delay to be (in milliseconds)?
-});
+//
+//    $.event.special.tap = {
+//    setup: function(data, namespaces) {
+//        var $elem = $(this);
+//        $elem.bind('touchstart', $.event.special.tap.handler)
+//             .bind('touchmove', $.event.special.tap.handler)
+//             .bind('touchend', $.event.special.tap.handler);
+//    },
+//
+//    teardown: function(namespaces) {
+//        var $elem = $(this);
+//        $elem.unbind('touchstart', $.event.special.tap.handler)
+//             .unbind('touchmove', $.event.special.tap.handler)
+//             .unbind('touchend', $.event.special.tap.handler);
+//    },
+//
+//    handler: function(event) {
+//        event.preventDefault();
+//        var $elem = $(this);
+//        $elem.data(event.type, 1);
+//        if (event.type === 'touchend' && !$elem.data('touchmove')) {
+//            event.type = 'tap';
+//            $.event.handle.apply(this, arguments);
+//        } else if ($elem.data('touchend')) {
+//            $elem.removeData('touchstart touchmove touchend');
+//        }
+//    }
+//};
+//
+//$('.button button').bind('tap', function() {
+//    //bind tap event to an img tag with the class thumb
+//    document.getElementById("body").classList.add('fire');
+//
+//
+//        setTimeout(function (){
+//
+//          document.getElementById("body").classList.remove('fire');
+//
+//        }, 100); // How long do you want the delay to be (in milliseconds)?
+//});
 </script>
 
 </body>
