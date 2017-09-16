@@ -22,8 +22,20 @@
 <!--background-position: -135px -635px;-->
 <button class="button" style="width: 150px; height: 145px; position: relative; left: 158px;top: -5px; background-color: Transparent" onclick="fire()" touchstart="fire()" ></button>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<audio id="audio" src="./sound.mp3" ></audio>
 <script>
     function fire(){
+
+        function gun_bang(){
+        var audio = document.createElement("audio");
+        audio.src = "./sound.mp3";
+        audio.addEventListener("ended", function () {
+            document.removeChild(this);
+        }, false);
+        audio.play();
+    }
+
+    gun_bang();
 
         document.getElementById("body").classList.add('fire');
 
@@ -32,10 +44,36 @@
 
           document.getElementById("body").classList.remove('fire');
 
+
         }, 100); // How long do you want the delay to be (in milliseconds)?
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     $.event.special.tap = {
     setup: function(data, namespaces) {
