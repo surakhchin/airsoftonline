@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Target Online</title>
+  <style>
+      .main {
+          background-image: url(target.png);
+          background-repeat: no-repeat;
+          background-position: 0px 0px;
+      }
+      .fire {
+          background-image: url(target2.png);
+          background-repeat: no-repeat;
+          background-position: 0px 0px;
+      }
+  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</head>
+<script>
+    function fire(){
+
+
+        var audio = document.getElementById("audio");
+        audio.currentTime=0;
+        audio.play();
+
+        document.getElementById("body").classList.add('fire');
+
+
+        setTimeout(function (){
+
+          document.getElementById("body").classList.remove('fire');
+
+
+        }, 100); // How long do you want the delay to be (in milliseconds)?
+
+
+    }
+
+
+
+</script>
+<body id="body" class="main">
+<!--background-size: 225%-->
+<!--background-position: -135px -635px;-->
+<button class="button" style="width: 150px; height: 145px; position: relative; left: 158px;top: -5px; background-color: Transparent" onclick="fire()" ></button>
+
+<audio id="audio" src="./sound2.mp3" ></audio>
+
+
+</body>
+
+</html>
